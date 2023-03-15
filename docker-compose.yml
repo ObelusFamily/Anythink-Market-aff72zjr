@@ -15,7 +15,7 @@ services:
       - PORT=3000
       - DATABASE_URL=postgres://user:@postgres-rails:5432
       - GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN=${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}
-      - OPENAI_API_KEY=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
+      - OPENAI_API_KEY=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
     depends_on:
       - "postgres-rails"
 

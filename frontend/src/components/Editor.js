@@ -15,7 +15,6 @@ const mapStateToProps = (state) => ({
   ...state.editor,
 });
 
-
 const mapDispatchToProps = (dispatch) => ({
   onAddTag: () => dispatch({ type: ADD_TAG }),
   onLoad: (payload) => dispatch({ type: EDITOR_PAGE_LOADED, payload }),
@@ -56,7 +55,6 @@ class Editor extends React.Component {
         image: this.props.image,
         tagList: this.props.tagList,
       };
-
 
       const slug = { slug: this.props.itemSlug };
       const promise = this.props.itemSlug

@@ -54,6 +54,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
 
+    if !image 
+      image: 'backend/app/assets/images/placeholder.png'
+    end
+
     if @item.save
       sendEvent("item_created", { item: item_params })
       render :show

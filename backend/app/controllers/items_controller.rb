@@ -53,10 +53,8 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user = current_user
+    @item.image = "https://talentclick.com/wp-content/uploads/2021/08/placeholder-image.png" if (@item.image == '' || @item.image.nil?)
 
-    if !image 
-      image: 'backend/app/assets/images/placeholder.png'
-    end
 
     if @item.save
       sendEvent("item_created", { item: item_params })
